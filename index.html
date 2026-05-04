@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Palace — Luxury Hotel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#">✦ THE GOLDEN PALACE</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#booking">Reserve</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Established 1912 · Cairo</p>
+      <h1 class="hero-title">Where Luxury<br/>Finds Its Soul</h1>
+      <p class="hero-sub">An unrivalled sanctuary of elegance in the heart of the city</p>
+      <a href="#booking" class="btn-gold">Reserve Your Suite</a>
+    </div>
+
+    <div class="hero-line"></div>
+  </section>
+
+  <section id="rooms" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="label">Our Accommodations</p>
+        <h2 class="section-title">Curated Suites</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="rooms-grid">
+
+        <article class="room-card">
+          <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80')">
+            <span class="room-badge">Classic</span>
+          </div>
+          <div class="room-info">
+            <h3>Deluxe Room</h3>
+            <p>Refined comfort with floor-to-ceiling windows, handcrafted furnishings, and a marble en-suite bathroom.</p>
+            <div class="room-footer">
+              <span class="price">$280 <small>/ night</small></span>
+              <a href="#booking" class="btn-outline">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card featured">
+          <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80')">
+            <span class="room-badge">Most Popular</span>
+          </div>
+          <div class="room-info">
+            <h3>Junior Suite</h3>
+            <p>A spacious sanctuary with a private lounge, king-size bed, and panoramic views of the city skyline.</p>
+            <div class="room-footer">
+              <span class="price">$480 <small>/ night</small></span>
+              <a href="#booking" class="btn-gold">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-img" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80')">
+            <span class="room-badge">Exclusive</span>
+          </div>
+          <div class="room-info">
+            <h3>Presidential Suite</h3>
+            <p>The pinnacle of opulence — private terrace, butler service, and bespoke interiors by a master designer.</p>
+            <div class="room-footer">
+              <span class="price">$1,200 <small>/ night</small></span>
+              <a href="#booking" class="btn-outline">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="section section-dark">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="label">Reservations</p>
+        <h2 class="section-title">Reserve Your Stay</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="form-card">
+        <form id="bookForm" novalidate>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Jean Dupont" />
+              <span class="err" id="errName">Please enter your name</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+              <span class="err" id="errEmail">Please enter a valid email</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="checkin">Check-In</label>
+              <input type="date" id="checkin" />
+              <span class="err" id="errIn">Please select a date</span>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout">Check-Out</label>
+              <input type="date" id="checkout" />
+              <span class="err" id="errOut">Please select a date</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="room">Room Type</label>
+            <select id="room">
+              <option value="">— Select a suite —</option>
+              <option value="deluxe">Deluxe Room — $280/night</option>
+              <option value="junior">Junior Suite — $480/night</option>
+              <option value="presidential">Presidential Suite — $1,200/night</option>
+            </select>
+            <span class="err" id="errRoom">Please choose a room</span>
+          </div>
+
+          <div class="success-msg" id="successMsg">
+            ✦ Your reservation has been received. We will be in touch shortly.
+          </div>
+
+          <button type="submit" class="btn-gold btn-wide">Confirm Reservation</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <p class="logo">✦ THE GOLDEN PALACE</p>
+        <p>12 Rue de la Paix, Paris, France</p>
+        <p>+33 1 42 00 00 00</p>
+        <p>stay@thegoldenpalace.com</p>
+      </div>
+
+      <div class="footer-links">
+        <p class="footer-heading">Navigation</p>
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#booking">Reserve</a>
+      </div>
+
+      <div class="footer-links">
+        <p class="footer-heading">Legal</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+
+    </div>
+    <p class="copyright">© 2025 The Golden Palace · All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
